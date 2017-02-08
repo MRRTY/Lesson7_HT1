@@ -20,10 +20,6 @@ public class Main {
         port.addShip(sSeven);
         Thread t = new Thread(port);
         t.start();
-        try {
-            t.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 }
