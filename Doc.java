@@ -18,7 +18,6 @@ public class Doc implements Runnable {
 
     @Override
     public void run() {
-        free = false;
         try {
             Thread.sleep(speed * ship.getBoxes());
         } catch (InterruptedException e) {

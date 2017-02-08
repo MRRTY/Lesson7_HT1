@@ -26,6 +26,7 @@ public class Port implements Runnable{
                 if(doc.isFree()){
                     doc.setShip(ships.poll());
                     (new Thread(doc)).start();
+                    doc.setFree(false);
                 }
             }
             try {
