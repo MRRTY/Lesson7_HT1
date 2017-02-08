@@ -24,6 +24,8 @@ public class Doc implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("Ship was unloaded");
+        free = true;
         port.wakeUp();
 
     }

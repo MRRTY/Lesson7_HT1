@@ -20,7 +20,7 @@ public class Port implements Runnable{
         ships.add(ship);
     }
     @Override
-    public  void run(){
+    public synchronized void run(){
         while (!ships.isEmpty()) {
             for (Doc doc : docs) {
                 if(doc.isFree()){
@@ -34,9 +34,10 @@ public class Port implements Runnable{
                 e.printStackTrace();
             }
         }
+        System.out.println("Port");
 
     }
     public synchronized void wakeUp(){
-        notify();
+        notifyAll();
     }
 }
